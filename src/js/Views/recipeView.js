@@ -1,8 +1,5 @@
 import icons from 'url:../../img/icons.svg'; //-> Get Icons from Parcel Dist folders.
 import { Fraction } from 'fractional';
-console.log(icons);
-
-console.log(Fraction);
 
 class RecipeView {
   #parentElement = document.querySelector('.recipe');
@@ -12,8 +9,7 @@ class RecipeView {
     this.#data = data;
     const markup = this._generateMarkup();
     this._clear();
-    console.log(`=== image link ===`);
-    console.log(this.#data.image);
+
     this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   }
   renderSpinner() {
